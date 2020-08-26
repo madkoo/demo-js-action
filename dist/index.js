@@ -451,7 +451,6 @@ module.exports = debug;
 const core = __webpack_require__(694);
 const github = __webpack_require__(30);
 const axios = __webpack_require__(227);
-// const { config } = require('process');
 
 //Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
 try {
