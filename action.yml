@@ -1,0 +1,13 @@
+name: 'Hello Teams' #*
+description: 'will send an hello world' #*
+inputs:
+  msg-to-teams:  # id of input *
+    description: 'Message to teams' #*
+    required: true #*
+    default: 'Hi From GitHub'
+outputs:
+  time: # id of output #*
+    description: 'The time we greeted you' #*
+runs: #* Configures the path to the action's code and the application used to execute the code.
+  using: 'node12' #* application used to execute the code
+  main: 'dist/index.js' #* file that contains the action code
