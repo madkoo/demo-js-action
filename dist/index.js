@@ -459,7 +459,10 @@ try {
     env = process.env;
 
     config = {
-        webHookUrl: e.TEAMS_WEBHOOK,
+        webHookUrl: env.TEAMS_WEBHOOK,
+    }
+    if (!config.webHookUrl) {
+        Core.setFailed("TEAMS_WEBHOOK is not set. Set it with\nenv:\n\TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}\n");
     }
 
     // `msgto-Teams` input defined in action metadata file
