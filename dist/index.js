@@ -456,10 +456,10 @@ const { config } = __webpack_require__(316);
 //Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
 try {
 
-    env = process.env;
+    e = process.env;
 
     config = {
-        webHookUrl: env.TEAMS_WEBHOOK,
+        webHookUrl: e.TEAMS_WEBHOOK,
     }
     if (!config.webHookUrl) {
         Core.setFailed("TEAMS_WEBHOOK is not set. Set it with\nenv:\n\TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}\n");
