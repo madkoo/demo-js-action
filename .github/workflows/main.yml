@@ -9,11 +9,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
+        env:
+         TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
         id: hello
         with:
-          msg-to-teams: 'Hello from GitHub!'
-        env:
-          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
+          msg-to-teams: 'Hello from GitHub'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+       
