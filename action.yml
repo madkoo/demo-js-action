@@ -10,4 +10,4 @@ outputs:
     description: 'The time we greeted you' #*
 runs: #* Configures the path to the action's code and the application used to execute the code.
   using: 'node12' #* application used to execute the code
-  main: 'dist/index.js' #* file that contains the action code
+  main: 'index.js' #* file that contains the action code
