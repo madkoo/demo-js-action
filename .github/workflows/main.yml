@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job that sends hello to teams
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: madkoo/demo-js-action@v1 # Uses an action in the root directory
         env:
          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
         id: hello
