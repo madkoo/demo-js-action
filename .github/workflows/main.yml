@@ -7,7 +7,7 @@ jobs:
     name: A job that sends hello to teams
     steps:
       - name: Hello world action step
-        uses: madkoo/demo-js-action@v1
+        uses: madkoo/demo-js-action@v1.1
         env:
          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
         id: hello
