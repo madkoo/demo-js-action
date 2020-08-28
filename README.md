@@ -16,14 +16,12 @@ The time we greeted you.
 
 ## Example usage
 
-- name: Checkout
-  uses: actions/checkout@v2
-  - name: Hello world action step
-    uses: ./ # Uses an action in the root directory
-    id: hello
-    with:
-    who-to-greet: 'Hi from Github'
-    env:
-        TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
+- name: Hello world action step
+  uses: madkoo/demo-js-action@v1
+  id: hello
+  with:
+  who-to-greet: 'Hi from Github'
+  env:
+      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }} # required
 
-#edemo
+
