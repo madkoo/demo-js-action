@@ -3,9 +3,7 @@ const github = require('@actions/github');
 const axios = require('axios');
 
 try {
-
     e = process.env;
-
     config = {
         webHookUrl: e.TEAMS_WEBHOOK,
     }
@@ -13,7 +11,6 @@ try {
         Core.setFailed("TEAMS_WEBHOOK is not set. Set it with\nenv:\n\TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}\n");
     }
 
-    // `msgto-Teams` input defined in action metadata file
     const msgToTeams = core.getInput('msg-to-teams');
     console.log(`${msgToTeams}!`);
 
@@ -32,7 +29,6 @@ try {
 
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
-    // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);
 
