@@ -26,7 +26,6 @@ try {
             console.error(error)
         })
 
-
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
     const payload = JSON.stringify(github.context.payload, undefined, 2)
